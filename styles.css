@@ -55,5 +55,4 @@ body{
 .list-item:hover, .list-item.active{
     background-color: #fff;
     color: #000;
-    transition: 0.5s;
 }
