@@ -81,3 +81,148 @@ body{
 #time{
     padding: 0 0 0 100px;
 }
+
+#navigation{
+    margin-top: 15px;
+}
+
+.map{
+    border-radius: 25px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+#music{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.music-player{
+    background-color: #000000;
+    width: 100%;
+    padding: 0 40px;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .circle{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    color: #000000;
+    box-shadow: 0 5px 10px rgba(255,26,26,0.15);
+}
+
+.song-img{
+    width: 155px;
+    border-radius: 5%;
+    border: 8px solid #fff;
+    box-shadow: 0 10px 60px rgba(255,26,26,0.22);
+}
+
+.music-player h1{
+    font-size: 25px;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.music-player p{
+    font-size: 14px;
+    color: #333;
+    margin-top: 5px;
+}
+
+#progress{
+    appearance: none;
+    width: 77%;
+    height: 6px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 19px 0;
+}
+
+#progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #000000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 5px rgba(255,26,26,0.15);
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls div{
+    width: 40px;
+    height: 40px;
+    margin: 19px;
+    background-color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #000000;
+    box-shadow: 0 10px 20px rgba(255,26,26,0.15);
+    cursor: pointer;
+}
+
+.controls div:nth-child(2){
+    transform:  scale(1.5);
+    background-color: #fff;
+    color: #000000;
+}
+
+#apps{
+    width: 100%;
+    margin-left: 10px;
+}
+
+.app-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    grid-gap: 25px;
+    margin-top: 35px;
+}
+
+.app{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.app img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.y-tube{
+    border: none;
+}
+
+.app:hover img{
+    transform: scale(1.1);
+}

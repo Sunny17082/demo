@@ -12,22 +12,22 @@
         <div class="sidebar">
             <div class="sidebar-content">
                 <ul class="list">
-                    <li class="list-item active" onclick="opentab()"><i class="fa-solid fa-house"></i></li>
+                    <li class="list-item active" onclick="opentab('overview')"><i class="fa-solid fa-house"></i></li>
                 </ul>
                 <ul class="list">
-                    <li class="list-item" onclick="opentab()"><i class="fa-solid fa-location-dot"></i></li>
+                    <li class="list-item" onclick="opentab('navigation')"><i class="fa-solid fa-location-dot"></i></li>
                 </ul>
                 <ul class="list">
-                    <li class="list-item" onclick="opentab()"><i class="fa-solid fa-music"></i></li>
+                    <li class="list-item" onclick="opentab('music')"><i class="fa-solid fa-music"></i></li>
                 </ul>
                 <ul class="list">
-                    <li class="list-item" onclick="opentab()"><i class="fa-solid fa-message"></i></li>
+                    <li class="list-item" onclick="opentab('')"><i class="fa-solid fa-message"></i></li>
                 </ul>
                 <ul class="list">
-                    <li class="list-item" onclick="opentab()"><i class="fa-brands fa-app-store-ios"></i></li>
+                    <li class="list-item" onclick="opentab('apps')"><i class="fa-brands fa-app-store-ios"></i></li>
                 </ul>
                 <ul class="list">
-                    <li class="list-item" onclick="opentab()"><i class="fa-solid fa-gear"></i></li>
+                    <li class="list-item" onclick="opentab('')"><i class="fa-solid fa-gear"></i></li>
                 </ul>
             </div>
         </div>
@@ -35,6 +35,58 @@
             <h1><i class="fa-solid fa-user"></i> Sunny</h1>
             <h1 id="time"></h1>
             <h1><i class="fa-brands fa-bluetooth-b"></i> <i class="fa-solid fa-wifi"></i> <span id="date"></span></h1>
+        </div>
+        <div class="tab-contents active-tab" id="overview"></div>
+        <div class="tab-contents" id="navigation">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.078273289591!2d88.42445437504021!3d22.576175632839874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02751a9d9c9e85%3A0x7fe665c781b10383!2sTechno%20Main%20Salt%20Lake!5e0!3m2!1sen!2sin!4v1692108613603!5m2!1sen!2sin" width="680" height="365" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="tab-contents" id="music">
+            <div class="music-player">
+                <nav>
+                    <div class="circle">
+                        <i class="fa-solid fa-angle-left"></i>
+                    </div>
+                    <div class="circle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+                <img src="resources/ghost.gif" class="song-img">
+                <h1>Metamorphosis</h1>
+                <p>Song by INTERWORLD</p>
+                <audio id="song">
+                    <source id="next" src="resources/Metamorphosis.mp3" type="audio/mpeg">
+                </audio>
+                <input type="range" value="0" id="progress">
+                <div class="controls">
+                    <div onclick="prev()"><i class="fa-solid fa-backward-step"></i></div>
+                    <div onclick="playpause()"><i class="fa-solid fa-play" id="ctrl-icon"></i></div>
+                    <div onclick="next()"><i class="fa-solid fa-forward-step"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-contents" id="apps">
+            <div class="app-list">
+                <div class="app">
+                    <a href="./player/video.html">
+                        <img src="resources/Netflix.png" alt="">
+                    </a>
+                </div>
+                <div class="app">
+                    <img src="resources/spotify.png" alt="">
+                </div>
+                <div class="app">
+                    <img src="resources/uber.png" alt="">
+                </div>
+                <div class="app">
+                    <img src="resources/amazon prime.png" alt="">
+                </div>
+                <div class="app">
+                    <img src="resources/hotstar.png" alt="">
+                </div>
+                <div class="app y-tube">
+                    <img src="resources/youtube.png" alt="">
+                </div>
+            </div>
         </div>
     </div>
     <script src="index.js"></script>
