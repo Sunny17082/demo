@@ -383,7 +383,6 @@ video{
 .icon-style{
     color: var(--primary-color);
     font-size: 26px;
-    cursor: pointer;
 }
 
 .containerPowerOn{
