@@ -383,6 +383,7 @@ video{
 .icon-style{
     color: var(--primary-color);
     font-size: 26px;
+    cursor: pointer;
 }
 
 .containerPowerOn{
@@ -416,4 +417,119 @@ video{
 
 .no{
     display: none;
+}
+
+#overview{
+    width: 100%;
+    margin-top: 15px;
+}
+
+.row-main{
+    width: 700px;
+    height: 365px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.car{
+    flex-basis: 49%;
+    background-color: var(--tertiary-color);
+    border-radius: 10px;
+    display: flex;
+    position: relative;
+}
+
+.column{
+    flex-basis: 49%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.column1{
+    background-color: var(--tertiary-color);
+    flex-basis: 49%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.column2{
+    background-color: var(--tertiary-color);
+    flex-basis: 49%;
+    border-radius: 10px;
+}
+
+.car img{
+    width: 100%;
+    height: 100%;
+}
+
+.autopilot{
+    width: 150px;
+    height: 150px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.autopilot h1{
+    margin-top: 5px;
+}
+
+.on{
+    color: green;
+}
+
+.off{
+    color: red;
+}
+
+.autopilot-content{
+    flex-basis: 49%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.autopilot-content div{
+    display: flex;
+    cursor: pointer;
+}
+
+.autopilot-content div i{
+    margin-right: 15px;
+    font-size: 26px;
+}
+
+.autopilot-content div p{
+    font-size: 16px;
+}
+
+.autopilot-content div span{
+    font-size: 10px;
+}
+
+#messages{
+    width: 700px;
+    height: 365px;
+    margin-top: 15px;
+}
+
+.message{
+    width: 700px;
+    height: 365px;
+    background-color: var(--tertiary-color);
 }

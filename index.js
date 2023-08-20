@@ -137,3 +137,16 @@ function powerOn(){
     containerPowerOn.classList.add("no");
     container.classList.remove("no");
 }
+
+const auto = document.querySelector("autopilot");
+const onOff = document.getElementById("on-off");
+
+function autopilot(){
+    if(onOff.innerHTML == "ON"){
+        onOff.innerHTML='OFF';
+        onOff.classList.add("off");
+    } else {
+        onOff.innerHTML='ON';
+        onOff.classList.remove("off");
+    }
+}
