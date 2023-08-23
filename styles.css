@@ -465,8 +465,13 @@ video{
 }
 
 .car img{
-    width: 100%;
+    width: 85%;
     height: 100%;
+    transition: transform 0.5s;
+}
+
+.car img:hover{
+    transform: scale(1.05);
 }
 
 .autopilot{
@@ -496,7 +501,7 @@ video{
     color: red;
 }
 
-.autopilot-content{
+#autopilot-content{
     flex-basis: 49%;
     width: 150px;
     height: 150px;
@@ -507,21 +512,21 @@ video{
     margin-top: 15px;
 }
 
-.autopilot-content div{
+#autopilot-content div{
     display: flex;
     cursor: pointer;
 }
 
-.autopilot-content div i{
+#autopilot-content div i{
     margin-right: 15px;
     font-size: 26px;
 }
 
-.autopilot-content div p{
+#autopilot-content div p{
     font-size: 16px;
 }
 
-.autopilot-content div span{
+#autopilot-content div span{
     font-size: 10px;
 }
 
@@ -553,4 +558,39 @@ video{
     width: 90%;
     height: 90%;
     border-radius: 10px;
+}
+
+.car-controls{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    right: 25px;
+    height: 100%;
+    width: 25%;
+    gap: 10px;
+}
+
+.car-controls div{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+}
+
+.car-controls div:nth-child(2){
+    width: 70px;
+    height: 70px;
+    font-size: 31px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 5px solid var(--primary-color);
 }

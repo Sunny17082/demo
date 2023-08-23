@@ -117,11 +117,11 @@ var icon = document.getElementById("icon");
 icon.onclick = function() {
     document.body.classList.toggle("light-theme");
     if(document.body.classList.contains("light-theme")){
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-    } else {
         icon.classList.remove("fa-sun");
         icon.classList.add("fa-moon");
+    } else {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
     }
 }
 
@@ -138,15 +138,76 @@ function powerOn(){
     container.classList.remove("no");
 }
 
+var colorchangeprimary="";
+var colorchangesecondary="";
+
+function know(){
+    if(icon.classList.contains("fa-moon")){
+        colorchangeprimary = "black";
+        colorchangesecondary = "white";
+    } else {
+        colorchangeprimary = "white";
+        colorchangesecondary = "black";
+    }
+}
+
 const auto = document.querySelector("autopilot");
+const autopilotsound = document.getElementById("autopilot-sound");
 const onOff = document.getElementById("on-off");
+const content = document.getElementById("autopilot-content");
+const engage1 = document.getElementById("engage-1");
+const engage2 = document.getElementById("engage-2");
 
 function autopilot(){
+    autopilotsound.play();
+    know();
     if(onOff.innerHTML == "ON"){
         onOff.innerHTML='OFF';
         onOff.classList.add("off");
+        content.style.color = colorchangesecondary;
+        engage1.innerHTML="Not Engaged";
+        engage2.innerHTML="Not Engaged";
     } else {
         onOff.innerHTML='ON';
         onOff.classList.remove("off");
+        content.style.color=colorchangeprimary;
+        engage1.innerHTML="Engaged";
+        engage2.innerHTML="Engaged";
+    }
+}
+
+const locked = document.getElementById("locked");
+const carlock = document.getElementById("car-lock");
+
+function lock(){
+    carlock.play();
+    if(locked.classList.contains("fa-lock")){
+        locked.classList.remove("fa-lock");
+        locked.classList.add("fa-unlock");
+    } else {
+        locked.classList.remove("fa-unlock");
+        locked.classList.add("fa-lock");
+    }
+}
+
+const charging = document.getElementById("charge");
+const chargingsound = document.getElementById("charging-sound");
+
+function charge(){
+    know()
+    if(charging.style.color=="green"){
+        charging.style.color=colorchangeprimary;
+    } else {
+        charging.style.color="green";
+        chargingsound.play();
+    }
+}
+
+function changeangle(){
+    const carcamera = document.getElementById("car-camera");
+    if(carcamera.src.includes("resources/car.gif")){
+        carcamera.src="resources/car back.gif";
+    } else {
+        carcamera.src="resources/car.gif";
     }
 }

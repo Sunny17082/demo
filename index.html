@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="hero gradient-background">
-        <div id="container-main" class="container no">
+        <div id="container-main" class="container">
     
             <!-- sidebar -->
     
@@ -50,26 +50,40 @@
                 <div class="row-main">
                     <div class="car">
                         <img src="resources/car.png" alt="">
+                        <div class="car-controls">
+                            <div id="charge" onclick="charge()">
+                                <i class="fa-solid fa-bolt"></i>
+                                <audio id="charging-sound" src="resources/charging sound.mp3"></audio>
+                            </div>
+                            <div id="lock" onclick="lock()">
+                                <i id="locked" class="fa-solid fa-lock"></i>
+                                <audio id="car-lock" src="resources/lock.mp3"></audio>
+                            </div>
+                            <div id="cam" onclick="changeangle()">
+                                <i class="fa-solid fa-camera"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="column">
                         <div class="column1">
                             <div onclick="autopilot()" class="autopilot">
                                 <p>Autopilot</p>
                                 <h1 id="on-off" class="on">ON</h1>
+                                <audio id="autopilot-sound" src="resources/autopilot.mp3"></audio>
                             </div>
-                            <div class="autopilot-content">
+                            <div id="autopilot-content">
                                 <div>
                                     <i class="fa-solid fa-car"></i>
-                                    <p>Steering Assist <br><span>Engaged</span></p>
+                                    <p>Steering Assist <br><span id="engage-1">Engaged</span></p>
                                 </div>
                                 <div>
                                     <i class="fa-solid fa-road"></i>
-                                    <p>Lane Mitigation <br><span>Engaged</span></p>
+                                    <p>Lane Mitigation <br><span id="engage-2">Engaged</span></p>
                                 </div>
                             </div>
                         </div>
                         <div class="column2">
-                            <img src="resources/car.gif" alt="">
+                            <img id="car-camera" src="resources/car.gif" alt="">
                         </div>
                     </div>
                 </div>
@@ -180,7 +194,7 @@
                         <div class="more-setting">
                             <p>Dark Mode</p>
                             <div class="mode">
-                                <i id="icon" class="fa-solid fa-moon icon-style"></i>
+                                <i id="icon" class="fa-solid fa-sun icon-style"></i>
                             </div>
                         </div>
                         <div class="more-setting">
@@ -215,7 +229,7 @@
             </div>
         </div>
 
-        <div id="cPowerOn" class="containerPowerOn">
+        <div id="cPowerOn" class="containerPowerOn no">
             <div class="mode">
                 <i onclick="powerOn()" class="fa-solid fa-power-off icon-style"></i>
             </div>
