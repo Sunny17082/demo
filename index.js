@@ -248,3 +248,21 @@ function appendMessage(msg, type) {
 function scrollToBottom() {
     messageArea.scrollTop = messageArea.scrollHeight;
 }
+
+const wifi = document.getElementById("wifi");
+if(navigator.onLine)
+    wifi.classList.add("fa-wifi");
+else
+    wifi.classList.remove("fa-wifi");
+function checkNetworkStatus() {
+    if (navigator.onLine) {
+        location.reload();
+    } else {
+        location.reload();
+    }
+    containerPowerOn.classList.add("no");
+    container.classList.remove("no");
+}
+
+window.addEventListener('online', checkNetworkStatus);
+window.addEventListener('offline', checkNetworkStatus);
